@@ -13,6 +13,7 @@ BuildRequires:	SDL2_ttf-devel
 BuildRequires:	cmake >= 3.13
 BuildRequires:	libsodium-devel
 BuildRequires:	libstdc++-devel >= 6:4.8.1
+BuildRequires:	rpmbuild(macros) >= 1.605
 Requires(post,postun):	fontpostinst
 Requires:	hicolor-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
