@@ -1,16 +1,16 @@
 Summary:	Diablo build for modern operating systems
 Name:		devilutionX
-Version:	1.1.0
+Version:	1.2.0
 Release:	1
 License:	Unlicense
 Group:		X11/Applications/Games
 Source0:	https://github.com/diasurgical/devilutionX/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	76e7f5219e8f58ee71ab671b13ce3139
+# Source0-md5:	f6569e0eff2f5d69489775bdc288f3f5
 URL:		https://github.com/diasurgical/devilutionX/
 BuildRequires:	SDL2-devel
 BuildRequires:	SDL2_mixer-devel
 BuildRequires:	SDL2_ttf-devel
-BuildRequires:	cmake >= 3.10
+BuildRequires:	cmake >= 3.13
 BuildRequires:	libsodium-devel
 BuildRequires:	libstdc++-devel >= 6:4.8.1
 Requires(post,postun):	fontpostinst
@@ -28,7 +28,8 @@ Diablo build for modern operating systems.
 %build
 cd build
 %cmake .. \
-	-DTTF_FONT_DIR='"%{_ttffontsdir}/"'
+	-DTTF_FONT_DIR='"%{_ttffontsdir}/"' \
+	-DVERSION_NUM="%{version}"
 %{__make}
 
 %install
@@ -55,5 +56,10 @@ fontpostinst TTF
 %doc LICENSE README.md
 %attr(755,root,root) %{_bindir}/devilutionx
 %{_desktopdir}/devilutionx.desktop
+%{_desktopdir}/devilutionx-hellfire.desktop
 %{_ttffontsdir}/CharisSILB.ttf
 %{_iconsdir}/hicolor/512x512/apps/devilutionx.png
+%{_iconsdir}/hicolor/512x512/apps/devilutionx-hellfire.png
+%dir %{_datadir}/diasurgical
+%dir %{_datadir}/diasurgical/devilutionx
+%{_datadir}/diasurgical/devilutionx/devilutionx.mpq
