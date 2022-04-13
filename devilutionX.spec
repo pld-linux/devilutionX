@@ -11,6 +11,7 @@ BuildRequires:	SDL2-devel
 BuildRequires:	SDL2_image-devel >= 2.0.5
 BuildRequires:	bzip2-devel
 BuildRequires:	cmake >= 3.13
+BuildRequires:	gettext-tools
 BuildRequires:	libfmt-devel >= 7.0.0
 BuildRequires:	libsodium-devel
 BuildRequires:	libstdc++-devel >= 6:7
