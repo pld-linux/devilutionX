@@ -4,8 +4,8 @@ Version:	1.4.0
 Release:	1
 License:	Unlicense
 Group:		X11/Applications/Games
-Source0:	https://github.com/diasurgical/devilutionX/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	83136a831916cb62c8b14bee3c03831e
+Source0:	https://github.com/diasurgical/devilutionX/releases/download/%{version}/devilutionx-src.tar.xz
+# Source0-md5:	18dceeaecfcdfba57b90302edb6e2326
 URL:		https://github.com/diasurgical/devilutionX/
 BuildRequires:	SDL2-devel
 BuildRequires:	SDL2_image-devel >= 2.0.5
@@ -18,6 +18,8 @@ BuildRequires:	libstdc++-devel >= 6:7
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.605
 BuildRequires:	smpq
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 BuildRequires:	zlib-devel
 Requires(post,postun):	fontpostinst
 Requires:	SDL2_image >= 2.0.5
@@ -29,7 +31,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Diablo build for modern operating systems.
 
 %prep
-%setup -q
+%setup -q -n devilutionx-src-%{version}
 
 %build
 %cmake -B build \
