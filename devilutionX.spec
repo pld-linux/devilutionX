@@ -1,11 +1,11 @@
 Summary:	Diablo build for modern operating systems
 Name:		devilutionX
-Version:	1.4.0
+Version:	1.4.1
 Release:	1
 License:	Unlicense
 Group:		X11/Applications/Games
 Source0:	https://github.com/diasurgical/devilutionX/releases/download/%{version}/devilutionx-src.tar.xz
-# Source0-md5:	18dceeaecfcdfba57b90302edb6e2326
+# Source0-md5:	ad8940f1ec7272c6451c9d6c3c4d7699
 URL:		https://github.com/diasurgical/devilutionX/
 BuildRequires:	SDL2-devel
 BuildRequires:	SDL2_image-devel >= 2.0.5
@@ -17,6 +17,7 @@ BuildRequires:	libsodium-devel
 BuildRequires:	libstdc++-devel >= 6:7
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.605
+BuildRequires:	simpleini-devel >= 4.19
 BuildRequires:	smpq
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
@@ -38,6 +39,7 @@ Diablo build for modern operating systems.
 	-DVERSION_NUM="%{version}" \
 	-DDISABLE_ZERO_TIER:BOOL=ON \
 	-DDEVILUTIONX_STATIC_CXX_STDLIB:BOOL=OFF \
+	-DDEVILUTIONX_SYSTEM_SIMPLEINI:BOOL=ON \
 	-DBUILD_TESTING:BOOL=OFF
 %{__make} -C build
 
