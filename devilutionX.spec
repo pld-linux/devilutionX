@@ -22,7 +22,8 @@ BuildRequires:	smpq
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 BuildRequires:	zlib-devel
-Requires(post,postun):	fontpostinst
+Requires(post,postun):	desktop-file-utils
+Requires(post,postun):	gtk-update-icon-cache
 Requires:	SDL2_image >= 2.0.5
 Requires:	hicolor-icon-theme
 Requires:	libfmt >= 8.0.0
@@ -52,9 +53,11 @@ rm -rf $RPM_BUILD_ROOT
 rm -rf $RPM_BUILD_ROOT
 
 %post
+%update_desktop_database_post
 %update_icon_cache hicolor
 
 %postun
+%update_desktop_database_postun
 %update_icon_cache hicolor
 
 %files
