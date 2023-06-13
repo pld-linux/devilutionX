@@ -1,18 +1,18 @@
 Summary:	Diablo build for modern operating systems
 Name:		devilutionX
-Version:	1.4.1
-Release:	2
+Version:	1.5.0
+Release:	1
 License:	Unlicense
 Group:		X11/Applications/Games
 Source0:	https://github.com/diasurgical/devilutionX/releases/download/%{version}/devilutionx-src.tar.xz
-# Source0-md5:	ad8940f1ec7272c6451c9d6c3c4d7699
+# Source0-md5:	3963eeff2447222f2e35fc8701ba83e5
 URL:		https://github.com/diasurgical/devilutionX/
 BuildRequires:	SDL2-devel
 BuildRequires:	SDL2_image-devel >= 2.0.5
 BuildRequires:	bzip2-devel
-BuildRequires:	cmake >= 3.13
+BuildRequires:	cmake >= 3.15
 BuildRequires:	gettext-tools
-BuildRequires:	libfmt-devel >= 7.0.0
+BuildRequires:	libfmt-devel >= 8.0.0
 BuildRequires:	libsodium-devel
 BuildRequires:	libstdc++-devel >= 6:7
 BuildRequires:	pkgconfig
@@ -25,7 +25,7 @@ BuildRequires:	zlib-devel
 Requires(post,postun):	fontpostinst
 Requires:	SDL2_image >= 2.0.5
 Requires:	hicolor-icon-theme
-Requires:	libfmt >= 7.0.0
+Requires:	libfmt >= 8.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -59,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc LICENSE README.md
+%doc LICENSE.md README.md
 %attr(755,root,root) %{_bindir}/devilutionx
 %{_desktopdir}/devilutionx.desktop
 %{_desktopdir}/devilutionx-hellfire.desktop
@@ -68,3 +68,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/diasurgical
 %dir %{_datadir}/diasurgical/devilutionx
 %{_datadir}/diasurgical/devilutionx/devilutionx.mpq
+%{_datadir}/metainfo/devilutionx.metainfo.xml
