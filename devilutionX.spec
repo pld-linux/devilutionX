@@ -1,4 +1,5 @@
 Summary:	Diablo build for modern operating systems
+Summary(pl.UTF-8):	Diablo zbudowane dla współczesnych systemów operacyjnych
 Name:		devilutionX
 Version:	1.5.0
 Release:	1
@@ -31,6 +32,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Diablo build for modern operating systems.
+
+%description -l pl.UTF-8
+Diablo zbudowane dla współczesnych systemów operacyjnych.
 
 %prep
 %setup -q -n devilutionx-src-%{version}
