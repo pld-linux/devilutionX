@@ -1,12 +1,12 @@
 Summary:	Diablo build for modern operating systems
 Summary(pl.UTF-8):	Diablo zbudowane dla współczesnych systemów operacyjnych
 Name:		devilutionX
-Version:	1.5.0
-Release:	2
+Version:	1.5.1
+Release:	1
 License:	Unlicense
 Group:		X11/Applications/Games
 Source0:	https://github.com/diasurgical/devilutionX/releases/download/%{version}/devilutionx-src.tar.xz
-# Source0-md5:	3963eeff2447222f2e35fc8701ba83e5
+# Source0-md5:	2565d5633a012a25af6c831842fbe294
 URL:		https://github.com/diasurgical/devilutionX/
 BuildRequires:	SDL2-devel
 BuildRequires:	SDL2_image-devel >= 2.0.5
