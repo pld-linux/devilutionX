@@ -45,7 +45,9 @@ Diablo zbudowane dla współczesnych systemów operacyjnych.
 	-DDISABLE_ZERO_TIER:BOOL=ON \
 	-DDEVILUTIONX_STATIC_CXX_STDLIB:BOOL=OFF \
 	-DDEVILUTIONX_SYSTEM_SIMPLEINI:BOOL=ON \
-	-DBUILD_TESTING:BOOL=OFF
+	-DBUILD_TESTING:BOOL=OFF \
+	-DUSE_LD_MOLD:BOOL=OFF
+
 %{__make} -C build
 
 %install
